@@ -73,12 +73,15 @@
 	//	To push code to remote repo
 		COMMAND: git push -u origin main
 
-	//	To restore last commit OR Undo changes
+	//	To restore or Undo changes if file is in working directory or in staging area by git add .
 		COMMAND: git restore filename
 	//	If want to undo on all files.
 		COMMAND: git restore .
+	//	If file is added in stging area
+		COMMAND: git restore --staged filename
 	
-
+	//	To restore file if file is commited or code is pushed in remote repo
+		COMMAND: 
 
 	GitHub Workflow
 	_______________
