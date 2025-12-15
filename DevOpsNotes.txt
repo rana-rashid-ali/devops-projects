@@ -73,6 +73,13 @@
 	//	To push code to remote repo
 		COMMAND: git push -u origin main
 
+	//	To restore last commit OR Undo changes
+		COMMAND: git restore filename
+	//	If want to undo on all files.
+		COMMAND: git restore .
+	
+
+
 	GitHub Workflow
 	_______________
 
@@ -99,4 +106,4 @@
 	
 	NOTE: 	If we change a file that is pushed in remote repo. It shows file as M - Modified.
 	
-	
+	jdklfjsdlkfjlkdsjfsjflksdjfklsdjfklsj fljl
