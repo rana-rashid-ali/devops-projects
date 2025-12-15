@@ -1,0 +1,69 @@
+Roadmap or Concepts in DevOps
+______________________________
+
+
+1)	a) Version Control System(VCS)
+		It is used to track changes in code. 
+		Example: Git
+	b)	Version Control System Hosting Platform
+		GitHub,GitLab
+
+2)	Linux Operating System
+	Because DevOps technlogies use Linux commands to operate
+	
+3)	Containerization
+	It is used to create a lightweight image in which application with its environment is packed.
+	So, We can run that application in any environment.
+	Example: Docker
+	
+4)	Cloud Providers
+	These provide online storage, servers and other services.
+	Example: Amazon AWS, Microsoft Azure, Google Cloud Platform (GCP)
+
+5)	Configuration Management
+	Automation the setup or maintenance of system and software.
+	Example: Ansible
+	
+6)	Infrastructure Provisoing
+	To set servers and resources so, application can work automatically.
+	Example: Terraform
+	
+7)	Infrastructure Monitoring
+	To monitor reserved server and resources that was allocated in Infrastructure Provisoing.
+	Example: Grafana
+	
+8)	Container Orchestration
+	To manage multiple containers
+	Example: Kubernetes
+	
+---------------------------------------------------------------------------------------------------
+********************************** ROADMAP TOPIC END *********************************************
+---------------------------------------------------------------------------------------------------
+
+GitHub Commands
+_______________
+
+// To set username in Git globally
+	COMMAND: git config --global user.name "rana-rashid-ali"
+
+// To set email in Git globally
+	COMMAND: git config --global user.email "rashidrana092@gmail.com"
+
+// To get complete list of configurations in Git
+	COMMAND: git config --list
+	
+//	After creating repo,to intialize an empty repo in project folder run this command.
+//	It will create .git hidden folder in project folder. Its called local repo.
+//	The repo created on GitHub was called remote repo.
+	COMMAND: git init
+	
+//	To add project files in repo.
+//	. means track changes in current folder or all files in this folder
+//	If we want only to track changes in single file in repo then command will be "git add app.js"
+	COMMAND: git add . 
+
+
+
+
+
+
