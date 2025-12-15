@@ -1,69 +1,102 @@
-Roadmap or Concepts in DevOps
-______________________________
+	Roadmap or Concepts in DevOps
+	______________________________
 
 
-1)	a) Version Control System(VCS)
+	1)	a) Version Control System(VCS)
 		It is used to track changes in code. 
 		Example: Git
 	b)	Version Control System Hosting Platform
 		GitHub,GitLab
 
-2)	Linux Operating System
-	Because DevOps technlogies use Linux commands to operate
+	2)	Linux Operating System
+		Because DevOps technlogies use Linux commands to operate
 	
-3)	Containerization
-	It is used to create a lightweight image in which application with its environment is packed.
-	So, We can run that application in any environment.
-	Example: Docker
+	3)	Containerization
+		It is used to create a lightweight image in which application with its environment is packed.So, We can run that application in any environment.
+		Example: Docker
 	
-4)	Cloud Providers
-	These provide online storage, servers and other services.
-	Example: Amazon AWS, Microsoft Azure, Google Cloud Platform (GCP)
+	4)	Cloud Providers
+		These provide online storage, servers and other services.
+		Example: Amazon AWS, Microsoft Azure, Google Cloud Platform (GCP)
 
-5)	Configuration Management
-	Automation the setup or maintenance of system and software.
-	Example: Ansible
+	5)	Configuration Management
+		Automation the setup or maintenance of system and software.
+		Example: Ansible
 	
-6)	Infrastructure Provisoing
-	To set servers and resources so, application can work automatically.
-	Example: Terraform
+	6)	Infrastructure Provisoing
+		To set servers and resources so, application can work automatically.
+		Example: Terraform
 	
-7)	Infrastructure Monitoring
-	To monitor reserved server and resources that was allocated in Infrastructure Provisoing.
-	Example: Grafana
+	7)	Infrastructure Monitoring
+		To monitor reserved server and resources that was allocated in Infrastructure Provisoing.
+		Example: Grafana
 	
-8)	Container Orchestration
-	To manage multiple containers
-	Example: Kubernetes
+	8)	Container Orchestration
+		To manage multiple containers
+		Example: Kubernetes
 	
----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 ********************************** ROADMAP TOPIC END *********************************************
----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 
-GitHub Commands
-_______________
+	GitHub Commands
+	_______________
 
-// To set username in Git globally
+	// To set username in Git globally
 	COMMAND: git config --global user.name "rana-rashid-ali"
 
-// To set email in Git globally
+	// To set email in Git globally
 	COMMAND: git config --global user.email "rashidrana092@gmail.com"
 
-// To get complete list of configurations in Git
+	// To get complete list of configurations in Git
 	COMMAND: git config --list
 	
-//	After creating repo,to intialize an empty repo in project folder run this command.
-//	It will create .git hidden folder in project folder. Its called local repo.
-//	The repo created on GitHub was called remote repo.
-	COMMAND: git init
+	//	After creating repo,to intialize an empty repo in project folder run this command.
+	//	It will create .git hidden folder in project folder. Its called local repo.
+	//	The repo created on GitHub was called remote repo.
+		COMMAND: git init
 	
-//	To add project files in repo.
-//	. means track changes in current folder or all files in this folder
-//	If we want only to track changes in single file in repo then command will be "git add app.js"
-	COMMAND: git add . 
+	//	To add project files in repo.
+	//	. means track changes in current folder or all files in this folder
+	//	If we want only to track changes in single file in repo then command will be "git add 	app.js"
+		COMMAND: git add . 
+	
+	//	To store changes in local repo with a message detail that will be shown in remote repo.
+		COMMAND: git commit -m 'first commit'
+
+	//	To change branch name from master to maintenance
+		COMMAND: git branch -M main
+	
+	//	To add code files into remote repo from local repo
+		COMMAND: git remote add origin https://github.com/rana-rashid-ali/devops-projects.git
+
+	//	To push code to remote repo
+		COMMAND: git push -u origin main
+
+	GitHub Workflow
+	_______________
 
 
-
-
-
-
+	Working Directory -> git add -> Staging Area(temporary space to store changes) -> git commit -> Local Repo -> git push -> remote repo
+	
+	Step by step procedure
+	 
+	Step 1) First we write git init. It means git is initialize but not tracking anything. 
+			It shows file as U - Untracked
+	
+	Step 2)	Then write git add filename or . for all files. It will move files into staging area.
+			It shows files as A - Index Added. means now this file is added in staging area.
+			It will create a hidden folder .git in working directory.
+			
+	Step 3)	Then we write git commit -m 'commit message'. It will changes in local repo.
+	
+	Step 4)	Then we write git branch -M main. It will change branch name from master to main.
+			Because git's default branch name is master but github's default branch name is main.
+	
+	Step 5)	Then we write git remote add origin repo-name. It will link local repo to remote repo.
+	
+	Step 6)	Then we write git push origin main.It will push our changes from local repo to remote repo. If we use -u first time then we dont have to type origin main every time. git push will do the task.
+	
+	NOTE: 	If we change a file that is pushed in remote repo. It shows file as M - Modified.
+	
+	
