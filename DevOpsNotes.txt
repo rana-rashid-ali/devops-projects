@@ -80,8 +80,12 @@
 	//	If file is added in stging area
 		COMMAND: git restore --staged filename
 	
-	//	To restore file if file is commited or code is pushed in remote repo
-		COMMAND: 
+	//	To restore file if file is commited or code is pushed in remote repo.
+	//	First we need to show all commits with their hash values. 
+		COMMAND: git log
+	// 	Above command will show all commits hash values with details. 
+	//	If we want only hash values of commits in one line. 
+		COMMAND: git log --oneline
 
 	GitHub Workflow
 	_______________
