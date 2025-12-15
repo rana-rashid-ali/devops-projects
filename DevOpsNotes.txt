@@ -86,6 +86,33 @@
 	// 	Above command will show all commits hash values with details. 
 	//	If we want only hash values of commits in one line. 
 		COMMAND: git log --oneline
+	//	To restore undo changes 
+		COMMAND: git revert hashvalue of commit e.g git revert 5f6d27f8	
+	//	NOTE: git revert will undo the change but will not delete it from commit history
+
+	//	To restore or Undo changes and also delete it from commit history.
+	//	--soft means delete it from commit history but keep it in staging area
+	//	--hard means it will undo commits, disard changes from staging area also from working directory.
+	//	If no flag is used then by default --mixed is used.
+	//	In --mixed, It will undo commit and also discard changes from staging area.
+	//	HEAD~1 means move pointer to one step back
+		COMMAND: git reset --soft HEAD~1 
+
+	//	To set configurations globally, we use global git config file in root directory. 
+	//	If we want to set different configurations like username or email for different repo then we have to set configurations in that project's .git file.
+
+	// We can give a custom or shortcut name to a command that is known as alias in .config file 
+	//	go to .gitconfig file and type the following in that file. using nano .gitconfig command.
+	//	[alias]
+	//			st=status
+	//	In above line, st is shortcut or custom name given to command status
+	// If we use git config --global then alias will be set globally and can be used anywhere
+	//	If we use git config alias.b branch, It will set this shortcut to only that repo where .gitconfig is called now.
+	//	git config alias.b branch means set b for branch 
+	
+
+
+
 
 	GitHub Workflow
 	_______________
