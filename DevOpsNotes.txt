@@ -249,6 +249,18 @@
 	//	Below command means show me the diff between local and main branch of remote repo
 		COMMAND: git diff origin/main
 
+	//	If we want to see the difference between two commits then following command will do so.
+		COMMAND: git diff hashvalue hashvalue	e.g git diff b232d08 05d34b8
+
+	//	If we just want to know the file name where changes was made then following command will do so.
+		COMMAND: git diff --name-only	
+
+	//	If we want to see the changes in colors or hightlight the changes with colors then following command will do so.
+		COMMAND: git diff --color-words
+
+
+		
+			
 
 	GitHub Workflow
 	_______________
