@@ -1,4 +1,31 @@
 
+	GitHub Workflow
+	_______________
+
+
+	Working Directory -> git add -> Staging Area(temporary space to store changes) -> git commit -> Local Repo -> git push -> remote repo
+	
+	Step by step procedure
+	 
+	Step 1) First we write git init. It means git is initialize but not tracking anything. 
+			It shows file as U - Untracked
+	
+	Step 2)	Then write git add filename or . for all files. It will move files into staging area.
+			It shows files as A - Index Added. means now this file is added in staging area.
+			It will create a hidden folder .git in working directory.
+			
+	Step 3)	Then we write git commit -m 'commit message'. It will changes in local repo.
+	
+	Step 4)	Then we write git branch -M main. It will change branch name from master to main.
+			Because git's default branch name is master but github's default branch name is main.
+	
+	Step 5)	Then we write git remote add origin repo-name. It will link local repo to remote repo.
+	
+	Step 6)	Then we write git push origin main.It will push our changes from local repo to remote repo. If we use -u first time then we dont have to type origin main every time. git push will do the task.
+	
+	NOTE: 	If we change a file that is pushed in remote repo. It shows file as M - Modified.
+	
+
 	GitHub Commands
 	_______________
 
@@ -149,11 +176,6 @@
 		COMMAND: git merge origin/main	
 	//	origin means remote repo and main is branch name	
 
-	//	Difference between Git Push and Git Pull command
-
-
-
-
 	// How to deploy static pages in Github
 	//	Step 1: Make sure html file name is index.html
 	//	Step 2: Repo must be public
@@ -163,7 +185,6 @@
 	//	Step 6: Click on that dialoge, then go to Deploy from left bar. there will be live url of project.
 
 	// NOTE: If we make some changes in code. then we dont have to redeploy. after pushing code. changes will automatically shown in live url.
-
 
 	// How to deploy React App - Vite on Github using github pages
 	//	Step 1: run this command to install github page in react project
@@ -227,32 +248,12 @@
 		COMMAND: git commit filename -m 'commit message' e.g git command test.txt -m 'changes added in test.txt file'
 
 		
+	//	GIT Stash Commands
+	
+	//	git stash is used when we have to switch to some other branch and we do not want to discard changes and also not commit changes
+	//	Then we use git stash command. it will store changes from last commit to current changes in a temparary space.
+		COMMAND: git stash
 
+	//	To view changes that are stored in stash 
+		COMMAND: git stash --list
 
-
-	GitHub Workflow
-	_______________
-
-
-	Working Directory -> git add -> Staging Area(temporary space to store changes) -> git commit -> Local Repo -> git push -> remote repo
-	
-	Step by step procedure
-	 
-	Step 1) First we write git init. It means git is initialize but not tracking anything. 
-			It shows file as U - Untracked
-	
-	Step 2)	Then write git add filename or . for all files. It will move files into staging area.
-			It shows files as A - Index Added. means now this file is added in staging area.
-			It will create a hidden folder .git in working directory.
-			
-	Step 3)	Then we write git commit -m 'commit message'. It will changes in local repo.
-	
-	Step 4)	Then we write git branch -M main. It will change branch name from master to main.
-			Because git's default branch name is master but github's default branch name is main.
-	
-	Step 5)	Then we write git remote add origin repo-name. It will link local repo to remote repo.
-	
-	Step 6)	Then we write git push origin main.It will push our changes from local repo to remote repo. If we use -u first time then we dont have to type origin main every time. git push will do the task.
-	
-	NOTE: 	If we change a file that is pushed in remote repo. It shows file as M - Modified.
-	
