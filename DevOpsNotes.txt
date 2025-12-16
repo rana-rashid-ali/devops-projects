@@ -173,7 +173,23 @@
 	//	To clone from a specific branch
 		COMMAND: git clone --branch branch name  repolink.git e.g git clone --branch second repolink.git 
 	
-	
+	//	To get latest changes in repo
+	//	METHOD: 1( Safe and Recommended)
+	//	git fetch will download latest changes but it will not merge with working directory
+		COMMAND: git fetch OR git fetch origin 
+	//	origin means repo	
+
+	//	METHOD: 2( Not Recommended)
+	//	git pull will download latest changes and automatically it will merge with working directory
+		COMMAND: git pull origin main
+
+	//	After using git fetch origin code will download but will not show in working directory. 
+	//	use git status to check and verify latest changes are copied or not.
+	//	after runnnig git fetch origin command. Now we have to merge downloaded code in working directory
+		COMMAND: git merge origin/main	
+	//	origin means remote repo and main is branch name	
+
+
 	
 	GitHub Workflow
 	_______________
