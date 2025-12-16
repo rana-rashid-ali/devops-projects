@@ -1,43 +1,3 @@
-	Roadmap or Concepts in DevOps
-	______________________________
-
-
-	1)	a) Version Control System(VCS)
-		It is used to track changes in code. 
-		Example: Git
-	b)	Version Control System Hosting Platform
-		GitHub,GitLab
-
-	2)	Linux Operating System
-		Because DevOps technlogies use Linux commands to operate
-	
-	3)	Containerization
-		It is used to create a lightweight image in which application with its environment is packed.So, We can run that application in any environment.
-		Example: Docker
-	
-	4)	Cloud Providers
-		These provide online storage, servers and other services.
-		Example: Amazon AWS, Microsoft Azure, Google Cloud Platform (GCP)
-
-	5)	Configuration Management
-		Automation the setup or maintenance of system and software.
-		Example: Ansible
-	
-	6)	Infrastructure Provisoing
-		To set servers and resources so, application can work automatically.
-		Example: Terraform
-	
-	7)	Infrastructure Monitoring
-		To monitor reserved server and resources that was allocated in Infrastructure Provisoing.
-		Example: Grafana
-	
-	8)	Container Orchestration
-		To manage multiple containers
-		Example: Kubernetes
-	
---------------------------------------------------------------------------------------------------
-********************************** ROADMAP TOPIC END *********************************************
---------------------------------------------------------------------------------------------------
 
 	GitHub Commands
 	_______________
@@ -259,8 +219,14 @@
 		COMMAND: git diff --color-words
 
 	//	HOW TO SKIP GIT STAGING AREA
+
+	//	Below command will commit all changes in all files
 		COMMAND: git commit -a -m 'first commit'
 
+	// If we want to skip staging area for a specific file then following command will do so.
+		COMMAND: git commit filename -m 'commit message' e.g git command test.txt -m 'changes added in test.txt file'
+
+		
 
 
 
