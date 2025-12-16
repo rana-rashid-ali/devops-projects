@@ -137,8 +137,23 @@
 	//	To delete a branch
 		Commands: git branch -D branch name e.g git branch -D third
 
+	//	To push data from second branch
+		COMMAND: git push -u origin second
+		
+	//	To merge code from second to main branch.
+	//	first switch to main branch
+		COMMAND: git switch main
+	//	Then merge second branch in main branch
+		COMMAND: git merge second
+	//	Then push the code to main branch
+		COMMAND: git push -u origin main
 
-
+	
+	
+	
+	
+	
+	
 	GitHub Workflow
 	_______________
 
