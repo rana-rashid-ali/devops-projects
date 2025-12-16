@@ -189,6 +189,8 @@
 		COMMAND: git merge origin/main	
 	//	origin means remote repo and main is branch name	
 
+	//	Difference between Git Push and Git Pull command
+	
 
 	
 	GitHub Workflow
