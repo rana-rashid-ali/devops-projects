@@ -258,9 +258,11 @@
 	//	If we want to see the changes in colors or hightlight the changes with colors then following command will do so.
 		COMMAND: git diff --color-words
 
+	//	HOW TO SKIP GIT STAGING AREA
+		COMMAND: git commit -a -m 'first commit'
 
-		
-			
+
+
 
 	GitHub Workflow
 	_______________
