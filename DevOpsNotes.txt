@@ -106,11 +106,36 @@
 	//	[alias]
 	//			st=status
 	//	In above line, st is shortcut or custom name given to command status
-	// If we use git config --global then alias will be set globally and can be used anywhere
+	//	If we use git config --global then alias will be set globally and can be used anywhere
 	//	If we use git config alias.b branch, It will set this shortcut to only that repo where .gitconfig is called now.
 	//	git config alias.b branch means set b for branch 
 	
+	//	GIT Branches
+	//	To get list of branches in repo
+		COMMAND: git branch
 
+	//	To create new branch
+	//	Method 1:
+		COMMAND: git branch branch name e.g git branch second
+
+
+	//	To switch between branches
+	//	Method 1(Old way):
+		COMMAND: git checkout branch name e.g git checkout second		
+
+	//	Method 2 (Recommended way):
+		COMMAND: git switch branch name e.g git switch second		
+
+	//	To create new branch and switch to new branch in one command
+	//	Below command will check if branch is already exist then simply switch to it otherwise first create new branch then switch to it. 
+	//	Method 1 (Old way):
+		COMMAND: git checkout -b branch name e.g git checkout -b third		
+
+	//	Method 2 (Recommended way):
+		COMMAND: git switch -c branch name e.g git switch -c fourth		
+	
+	//	To delete a branch
+		Commands: git branch -D branch name e.g git branch -D third
 
 
 
