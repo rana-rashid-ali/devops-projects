@@ -271,3 +271,7 @@
 
 	//	To clear all stash memory
 		COMMAND: git stash clear
+
+	//	HOW TO ADD PEOPLE OR COLLABARATOR IN YOUR REPO
+	//	Step 1:	Go to repo settings and open COLLABARATORS
+	//	Step 2:	Search by email or username and send them invitation 	
