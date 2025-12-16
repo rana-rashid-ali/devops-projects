@@ -255,5 +255,19 @@
 		COMMAND: git stash
 
 	//	To view changes that are stored in stash 
-		COMMAND: git stash --list
+		COMMAND: git stash list
 
+	//	To retrieve changes from stash. 
+	//	METHOD 1: 
+		COMMAND: git stash apply
+	//	It will apply changes from recent stash but keep the changes in stash memory also.	
+
+	//	METHOD 2: 
+		COMMAND: git stash pop
+	//	It will apply changes from recent stash and remove the changes from stash memory also.
+
+	//	To retrieve changes from a specific stash
+		COMMAND: git stash apply stashindex 	e.g git stash apply stash@{1}	
+
+	//	To clear all stash memory
+		COMMAND: git stash clear
