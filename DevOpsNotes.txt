@@ -237,6 +237,16 @@
 	//	Step 8: Make sure that in repo settting then pages gh-pages is selected as branch under deploy from branch section 
 
 
+	//	Git Diff Command
+
+	//	Below command will show the difference or change that is made in working directory.
+		COMMAND: git diff
+
+	//	Below command will show the difference or change that is made is in staging area and still not committed.
+		COMMAND: git diff --staged
+
+
+
 	GitHub Workflow
 	_______________
 
