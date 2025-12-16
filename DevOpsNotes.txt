@@ -148,7 +148,12 @@
 	//	Then push the code to main branch
 		COMMAND: git push -u origin main
 
-	
+	//	COMMIT command detail
+	//	Use single commit for single feature. do not commit after adding one line.
+	//	It is recommended to NOT ammend or change commit AFTER code pushed to Github. Because, it will create new hash value of commit.
+	//	To ammend or change a commit on same commit (before code pushed)
+	//	METHOD: 1 (Hard way)
+		COMMAND: 
 	
 	
 	
