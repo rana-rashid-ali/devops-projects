@@ -190,9 +190,53 @@
 	//	origin means remote repo and main is branch name	
 
 	//	Difference between Git Push and Git Pull command
-	
 
+
+
+
+	// How to deploy static pages in Github
+	//	Step 1: Make sure html file name is index.html
+	//	Step 2: Repo must be public
+	//	Step 3: Go to Repo settigs then on left bar go to pages
+	//	Step 4: Select Deploy from branch, Then select branch name like main. then hit Save button
+	//	Step 5: Go to repo root folder and after some time yellow dot will turn into green check. 
+	//	Step 6: Click on that dialoge, then go to Deploy from left bar. there will be live url of project.
+
+	// NOTE: If we make some changes in code. then we dont have to redeploy. after pushing code. changes will automatically shown in live url.
+
+
+	// How to deploy React App - Vite on Github using github pages
+	//	Step 1: run this command to install github page in react project
+		COMMAND: npm i gh-pages
 	
+	//	Step 2: Then go to vite.config.js file and add below code before plugins: [react()],
+		CODE:  base: "/react-vite-app/",
+	//	In above line, "react-vite-app" is github repo name
+
+	//	Step 3: Go to pakcage.json and add below line above name: react project name. This step is required for deployment
+		CODE: "homepage": "repolink"
+
+	//	Step 4: then below script in package.json
+	//	In below line, -d means deploy and dist folder will be created when we created this project's build. 
+		 CODE: "deploy": "gh-pages -d dist"
+
+	//	Step 5: Then push the code to repo by using following steps.
+		a)	git init
+		b)	git add . 
+		c)	git commit -m 'first commit'
+		d)	git branch -M main
+		e)	git remote add origin repolink.git
+		f)	git push origin -u main
+	
+	//	Step 6: Then build the project by following command.
+		COMMAND: npm run build
+
+	//	Step 7: Now run this command to deploy dist folder on github pages. it will create a new branch in repo by name of gh-pages
+		COMMAND: npm run deploy
+	
+	//	Step 8: Make sure that in repo settting then pages gh-pages is selected as branch under deploy from branch section 
+
+
 	GitHub Workflow
 	_______________
 
