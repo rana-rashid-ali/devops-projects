@@ -245,6 +245,9 @@
 	//	Below command will show the difference or change that is made is in staging area and still not committed.
 		COMMAND: git diff --staged
 
+	//	If we commit a code which means changes are saved in local repo but not remote repo yet and we want to see the diff between local and remote repo then following command will do so.
+	//	Below command means show me the diff between local and main branch of remote repo
+		COMMAND: git diff origin/main
 
 
 	GitHub Workflow
