@@ -148,9 +148,30 @@
 	//	Then push the code to main branch
 		COMMAND: git push -u origin main
 
+	//	COMMIT command detail
+	//	Use single commit for single feature. do not commit after adding one line.
+	//	It is recommended to NOT ammend or change commit AFTER code pushed to Github. Because, it will create new hash value of commit.
+	//	To ammend or change a commit on same commit (before code pushed)
+	//	METHOD: 1 (Hard way)
+		COMMAND: git commit --amend
+	//	Above command will open in an editor where you can update commit
+	//	METHOD: 2 (Easy way)
+		COMMAND: git commit --amend -m 'Ammend command added'
 	
+	//	To clone a remote repo
+	//	Method: 1(Recommended)
+	//	It is recommended because by doing so, .git folder will also copied where all changes and commit are stored.
+		COMMAND: git clone repolink.git
+	//	Above command will create new folder by repo name and clone files in it
+	//	If we do not want to create new folder and we have already empty folder then put . after command
+		COMMAND: git clone repolink.git .
+
+	//	Method: 2(Not Recommended)
+	//	It is not recommended because by doing so, .git folder will not copied so we dont have all commits and changes stored in repo.
+		COMMAND: download repo as zip
 	
-	
+	//	To clone from a specific branch
+		COMMAND: git clone --branch branch name  repolink.git e.g git clone --branch second repolink.git 
 	
 	
 	
