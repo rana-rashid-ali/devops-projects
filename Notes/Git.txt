@@ -274,4 +274,71 @@
 
 	//	HOW TO ADD PEOPLE OR COLLABARATOR IN YOUR REPO
 	//	Step 1:	Go to repo settings and open COLLABARATORS
-	//	Step 2:	Search by email or username and send them invitation 	
+	//	Step 2:	Search by email or username and send them invitation
+
+	//	HOW TO USE MULTIPLE GITHUB ACCOUNTS ON SINGLE SYSTEM
+	//	Step 1:  remove existing github account from vs by following command
+		COMMAND: git config --global --unset user.name
+		COMMAND: git config --global --unset user.email
+	
+	//	Step 2:  delete existing account from Windows Credential Manager.
+
+	//	Step 3:  Set new user name and email by following command
+		COMMAND: git config --global  user.name "rashid"
+		COMMAND: git config --global  user.email "rashid@gmail.com"
+
+	//	Step 4:	To see git config list
+		COMMAND: git config --list
+
+	//	WHEN A COLLABARATOR WANTS TO PUSH CODE, HE WILL DO THE FOLLOWING steps
+		Step 1:  CLONE THE REPO
+		NOTE: COLLABARATOR will not use git init command. because its already done by team lead.
+		Step 2:  GIT ADD .
+		Step 3:  git commit -m 'commit message'
+		Step 4:	 git push -u origin main           
+
+	//	After COLLABARATOR's code push when team lead wants the latest code.then he will run following command.
+		COMMAND: git fetch or git pull or git merge origin main
+
+	//	IF WE ARE NOT ADDED AS COLLABARATOR IN A REPO AND STILL WANT TO ADD CODE IN THAT REPO 
+	//	THEN WE SEND PULL REQUEST. STEPS ARE FOLLOWING: 
+		
+	//	****** FROM USER SIDE ******
+
+	//	Step 1: Open that repo in which i want to contribute and then click on FORK option
+	//	FORK will create copy of that repo in user's github account
+
+	//	Step 2:	Now User will clone the forked repo from his account
+	
+	//	Step 3: Best way is to first create new branch for work by this command
+		COMMAND: git branch -b checkout new-feature
+	
+	//	Step 4: then add the code in new branch
+	
+	//	Step 5: Then push the code in new branch by using following Commands
+		COMMANDS: 
+		1)	git add .
+		2)	git commit -m 'code changes by user'
+		3)	git push -u origin new-feature
+
+	//	Step 6: Then click on COMPARE AND PULL option 
+
+	//	Step 7: after entering title and description click on CREATE PULL REQUEST
+
+	//	****** FROM OWNER SIDE ******
+
+	//	Step 8: Click on PULL REQUETS tab in repo
+
+	//	Step 9: Click on COMMIT to see changes 
+
+	//	Step 10: Click on REVIEW CHANGES. here are three option 
+	//	Option 1: Comment ( pass some comment on pull request but not accepting pull request)
+	//	Option 2: Approve ( Approve changes and merging it in main branch of original repo)
+	//	Option 3: Request Changes (tell user to first make these changes then pull request will approaved)
+
+	
+
+
+
+
+
