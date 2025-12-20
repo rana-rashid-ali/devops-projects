@@ -29,179 +29,179 @@
 	GitHub Commands
 	_______________
 
-	// To set username in Git globally
+	  To set username in Git globally
 	COMMAND: git config --global user.name "rana-rashid-ali"
 
-	// To set email in Git globally
+	  To set email in Git globally
 	COMMAND: git config --global user.email "rashidrana092@gmail.com"
 
-	// To get complete list of configurations in Git
+	  To get complete list of configurations in Git
 	COMMAND: git config --list
 	
-	//	After creating repo,to intialize an empty repo in project folder run this command.
-	//	It will create .git hidden folder in project folder. Its called local repo.
-	//	The repo created on GitHub was called remote repo.
+	 	After creating repo,to intialize an empty repo in project folder run this command.
+	 	It will create .git hidden folder in project folder. Its called local repo.
+	 	The repo created on GitHub was called remote repo.
 		COMMAND: git init
 	
-	//	To add project files in repo.
-	//	. means track changes in current folder or all files in this folder
-	//	If we want only to track changes in single file in repo then command will be "git add 	app.js"
+	 	To add project files in repo.
+	 	. means track changes in current folder or all files in this folder
+	 	If we want only to track changes in single file in repo then command will be "git add 	app.js"
 		COMMAND: git add . 
 	
-	//	To store changes in local repo with a message detail that will be shown in remote repo.
+	 	To store changes in local repo with a message detail that will be shown in remote repo.
 		COMMAND: git commit -m 'first commit'
 
-	//	To change branch name from master to maintenance
+	 	To change branch name from master to maintenance
 		COMMAND: git branch -M main
 	
-	//	To add code files into remote repo from local repo
-		COMMAND: git remote add origin https://github.com/rana-rashid-ali/devops-projects.git
+	 	To add code files into remote repo from local repo
+		COMMAND: git remote add origin https: github.com/rana-rashid-ali/devops-projects.git
 
-	//	To push code to remote repo
+	 	To push code to remote repo
 		COMMAND: git push -u origin main
 
-	//	To restore or Undo changes if file is in working directory or in staging area by git add .
+	 	To restore or Undo changes if file is in working directory or in staging area by git add .
 		COMMAND: git restore filename
-	//	If want to undo on all files.
+	 	If want to undo on all files.
 		COMMAND: git restore .
-	//	If file is added in stging area
+	 	If file is added in stging area
 		COMMAND: git restore --staged filename
 	
-	//	To restore file if file is commited or code is pushed in remote repo.
-	//	First we need to show all commits with their hash values. 
+	 	To restore file if file is commited or code is pushed in remote repo.
+	 	First we need to show all commits with their hash values. 
 		COMMAND: git log
-	// 	Above command will show all commits hash values with details. 
-	//	If we want only hash values of commits in one line. 
+	  	Above command will show all commits hash values with details. 
+	 	If we want only hash values of commits in one line. 
 		COMMAND: git log --oneline
-	//	To restore undo changes 
+	 	To restore undo changes 
 		COMMAND: git revert hashvalue of commit e.g git revert 5f6d27f8	
-	//	NOTE: git revert will undo the change but will not delete it from commit history
+	 	NOTE: git revert will undo the change but will not delete it from commit history
 
-	//	To restore or Undo changes and also delete it from commit history.
-	//	--soft means delete it from commit history but keep it in staging area
-	//	--hard means it will undo commits, disard changes from staging area also from working directory.
-	//	If no flag is used then by default --mixed is used.
-	//	In --mixed, It will undo commit and also discard changes from staging area.
-	//	HEAD~1 means move pointer to one step back
+	 	To restore or Undo changes and also delete it from commit history.
+	 	--soft means delete it from commit history but keep it in staging area
+	 	--hard means it will undo commits, disard changes from staging area also from working directory.
+	 	If no flag is used then by default --mixed is used.
+	 	In --mixed, It will undo commit and also discard changes from staging area.
+	 	HEAD~1 means move pointer to one step back
 		COMMAND: git reset --soft HEAD~1 
 
-	//	To set configurations globally, we use global git config file in root directory. 
-	//	If we want to set different configurations like username or email for different repo then we have to set configurations in that project's .git file.
+	 	To set configurations globally, we use global git config file in root directory. 
+	 	If we want to set different configurations like username or email for different repo then we have to set configurations in that project's .git file.
 
-	// We can give a custom or shortcut name to a command that is known as alias in .config file 
-	//	go to .gitconfig file and type the following in that file. using nano .gitconfig command.
-	//	[alias]
-	//			st=status
-	//	In above line, st is shortcut or custom name given to command status
-	//	If we use git config --global then alias will be set globally and can be used anywhere
-	//	If we use git config alias.b branch, It will set this shortcut to only that repo where .gitconfig is called now.
-	//	git config alias.b branch means set b for branch 
+	  We can give a custom or shortcut name to a command that is known as alias in .config file 
+	 	go to .gitconfig file and type the following in that file. using nano .gitconfig command.
+	 	[alias]
+	 			st=status
+	 	In above line, st is shortcut or custom name given to command status
+	 	If we use git config --global then alias will be set globally and can be used anywhere
+	 	If we use git config alias.b branch, It will set this shortcut to only that repo where .gitconfig is called now.
+	 	git config alias.b branch means set b for branch 
 	
-	//	GIT Branches
-	//	To get list of branches in repo
+	 	GIT Branches
+	 	To get list of branches in repo
 		COMMAND: git branch
 
-	//	To create new branch
-	//	Method 1:
+	 	To create new branch
+	 	Method 1:
 		COMMAND: git branch branch name e.g git branch second
 
 
-	//	To switch between branches
-	//	Method 1(Old way):
+	 	To switch between branches
+	 	Method 1(Old way):
 		COMMAND: git checkout branch name e.g git checkout second		
 
-	//	Method 2 (Recommended way):
+	 	Method 2 (Recommended way):
 		COMMAND: git switch branch name e.g git switch second		
 
-	//	To create new branch and switch to new branch in one command
-	//	Below command will check if branch is already exist then simply switch to it otherwise first create new branch then switch to it. 
-	//	Method 1 (Old way):
+	 	To create new branch and switch to new branch in one command
+	 	Below command will check if branch is already exist then simply switch to it otherwise first create new branch then switch to it. 
+	 	Method 1 (Old way):
 		COMMAND: git checkout -b branch name e.g git checkout -b third		
 
-	//	Method 2 (Recommended way):
+	 	Method 2 (Recommended way):
 		COMMAND: git switch -c branch name e.g git switch -c fourth		
 	
-	//	To delete a branch
+	 	To delete a branch
 		Commands: git branch -D branch name e.g git branch -D third
 
-	//	To push data from second branch
+	 	To push data from second branch
 		COMMAND: git push -u origin second
 		
-	//	To merge code from second to main branch.
-	//	first switch to main branch
+	 	To merge code from second to main branch.
+	 	first switch to main branch
 		COMMAND: git switch main
-	//	Then merge second branch in main branch
+	 	Then merge second branch in main branch
 		COMMAND: git merge second
-	//	Then push the code to main branch
+	 	Then push the code to main branch
 		COMMAND: git push -u origin main
 
-	//	COMMIT command detail
-	//	Use single commit for single feature. do not commit after adding one line.
-	//	It is recommended to NOT ammend or change commit AFTER code pushed to Github. Because, it will create new hash value of commit.
-	//	To ammend or change a commit on same commit (before code pushed)
-	//	METHOD: 1 (Hard way)
+	 	COMMIT command detail
+	 	Use single commit for single feature. do not commit after adding one line.
+	 	It is recommended to NOT ammend or change commit AFTER code pushed to Github. Because, it will create new hash value of commit.
+	 	To ammend or change a commit on same commit (before code pushed)
+	 	METHOD: 1 (Hard way)
 		COMMAND: git commit --amend
-	//	Above command will open in an editor where you can update commit
-	//	METHOD: 2 (Easy way)
+	 	Above command will open in an editor where you can update commit
+	 	METHOD: 2 (Easy way)
 		COMMAND: git commit --amend -m 'Ammend command added'
 	
-	//	To clone a remote repo
-	//	Method: 1(Recommended)
-	//	It is recommended because by doing so, .git folder will also copied where all changes and commit are stored.
+	 	To clone a remote repo
+	 	Method: 1(Recommended)
+	 	It is recommended because by doing so, .git folder will also copied where all changes and commit are stored.
 		COMMAND: git clone repolink.git
-	//	Above command will create new folder by repo name and clone files in it
-	//	If we do not want to create new folder and we have already empty folder then put . after command
+	 	Above command will create new folder by repo name and clone files in it
+	 	If we do not want to create new folder and we have already empty folder then put . after command
 		COMMAND: git clone repolink.git .
 
-	//	Method: 2(Not Recommended)
-	//	It is not recommended because by doing so, .git folder will not copied so we dont have all commits and changes stored in repo.
+	 	Method: 2(Not Recommended)
+	 	It is not recommended because by doing so, .git folder will not copied so we dont have all commits and changes stored in repo.
 		COMMAND: download repo as zip
 	
-	//	To clone from a specific branch
+	 	To clone from a specific branch
 		COMMAND: git clone --branch branch name  repolink.git e.g git clone --branch second repolink.git 
 	
-	//	To get latest changes in repo
-	//	METHOD: 1( Safe and Recommended)
-	//	git fetch will download latest changes but it will not merge with working directory
+	 	To get latest changes in repo
+	 	METHOD: 1( Safe and Recommended)
+	 	git fetch will download latest changes but it will not merge with working directory
 		COMMAND: git fetch OR git fetch origin 
-	//	origin means repo	
+	 	origin means repo	
 
-	//	METHOD: 2( Not Recommended)
-	//	git pull will download latest changes and automatically it will merge with working directory
+	 	METHOD: 2( Not Recommended)
+	 	git pull will download latest changes and automatically it will merge with working directory
 		COMMAND: git pull origin main
 
-	//	After using git fetch origin code will download but will not show in working directory. 
-	//	use git status to check and verify latest changes are copied or not.
-	//	after runnnig git fetch origin command. Now we have to merge downloaded code in working directory
+	 	After using git fetch origin code will download but will not show in working directory. 
+	 	use git status to check and verify latest changes are copied or not.
+	 	after runnnig git fetch origin command. Now we have to merge downloaded code in working directory
 		COMMAND: git merge origin/main	
-	//	origin means remote repo and main is branch name	
+	 	origin means remote repo and main is branch name	
 
-	// How to deploy static pages in Github
-	//	Step 1: Make sure html file name is index.html
-	//	Step 2: Repo must be public
-	//	Step 3: Go to Repo settigs then on left bar go to pages
-	//	Step 4: Select Deploy from branch, Then select branch name like main. then hit Save button
-	//	Step 5: Go to repo root folder and after some time yellow dot will turn into green check. 
-	//	Step 6: Click on that dialoge, then go to Deploy from left bar. there will be live url of project.
+	  How to deploy static pages in Github
+	 	Step 1: Make sure html file name is index.html
+	 	Step 2: Repo must be public
+	 	Step 3: Go to Repo settigs then on left bar go to pages
+	 	Step 4: Select Deploy from branch, Then select branch name like main. then hit Save button
+	 	Step 5: Go to repo root folder and after some time yellow dot will turn into green check. 
+	 	Step 6: Click on that dialoge, then go to Deploy from left bar. there will be live url of project.
 
-	// NOTE: If we make some changes in code. then we dont have to redeploy. after pushing code. changes will automatically shown in live url.
+	  NOTE: If we make some changes in code. then we dont have to redeploy. after pushing code. changes will automatically shown in live url.
 
-	// How to deploy React App - Vite on Github using github pages
-	//	Step 1: run this command to install github page in react project
+	  How to deploy React App - Vite on Github using github pages
+	 	Step 1: run this command to install github page in react project
 		COMMAND: npm i gh-pages
 	
-	//	Step 2: Then go to vite.config.js file and add below code before plugins: [react()],
+	 	Step 2: Then go to vite.config.js file and add below code before plugins: [react()],
 		CODE:  base: "/react-vite-app/",
-	//	In above line, "react-vite-app" is github repo name
+	 	In above line, "react-vite-app" is github repo name
 
-	//	Step 3: Go to pakcage.json and add below line above name: react project name. This step is required for deployment
+	 	Step 3: Go to pakcage.json and add below line above name: react project name. This step is required for deployment
 		CODE: "homepage": "repolink"
 
-	//	Step 4: then below script in package.json
-	//	In below line, -d means deploy and dist folder will be created when we created this project's build. 
+	 	Step 4: then below script in package.json
+	 	In below line, -d means deploy and dist folder will be created when we created this project's build. 
 		 CODE: "deploy": "gh-pages -d dist"
 
-	//	Step 5: Then push the code to repo by using following steps.
+	 	Step 5: Then push the code to repo by using following steps.
 		a)	git init
 		b)	git add . 
 		c)	git commit -m 'first commit'
@@ -209,134 +209,159 @@
 		e)	git remote add origin repolink.git
 		f)	git push origin -u main
 	
-	//	Step 6: Then build the project by following command.
+	 	Step 6: Then build the project by following command.
 		COMMAND: npm run build
 
-	//	Step 7: Now run this command to deploy dist folder on github pages. it will create a new branch in repo by name of gh-pages
+	 	Step 7: Now run this command to deploy dist folder on github pages. it will create a new branch in repo by name of gh-pages
 		COMMAND: npm run deploy
 	
-	//	Step 8: Make sure that in repo settting then pages gh-pages is selected as branch under deploy from branch section 
+	 	Step 8: Make sure that in repo settting then pages gh-pages is selected as branch under deploy from branch section 
 
 
-	//	Git Diff Command
+	 	Git Diff Command
 
-	//	Below command will show the difference or change that is made in working directory.
+	 	Below command will show the difference or change that is made in working directory.
 		COMMAND: git diff
 
-	//	Below command will show the difference or change that is made is in staging area and still not committed.
+	 	Below command will show the difference or change that is made is in staging area and still not committed.
 		COMMAND: git diff --staged
 
-	//	If we commit a code which means changes are saved in local repo but not remote repo yet and we want to see the diff between local and remote repo then following command will do so.
-	//	Below command means show me the diff between local and main branch of remote repo
+	 	If we commit a code which means changes are saved in local repo but not remote repo yet and we want to see the diff between local and remote repo then following command will do so.
+	 	Below command means show me the diff between local and main branch of remote repo
 		COMMAND: git diff origin/main
 
-	//	If we want to see the difference between two commits then following command will do so.
+	 	If we want to see the difference between two commits then following command will do so.
 		COMMAND: git diff hashvalue hashvalue	e.g git diff b232d08 05d34b8
 
-	//	If we just want to know the file name where changes was made then following command will do so.
+	 	If we just want to know the file name where changes was made then following command will do so.
 		COMMAND: git diff --name-only	
 
-	//	If we want to see the changes in colors or hightlight the changes with colors then following command will do so.
+	 	If we want to see the changes in colors or hightlight the changes with colors then following command will do so.
 		COMMAND: git diff --color-words
 
-	//	HOW TO SKIP GIT STAGING AREA
+	 	HOW TO SKIP GIT STAGING AREA
 
-	//	Below command will commit all changes in all files
+	 	Below command will commit all changes in all files
 		COMMAND: git commit -a -m 'first commit'
 
-	// If we want to skip staging area for a specific file then following command will do so.
+	  If we want to skip staging area for a specific file then following command will do so.
 		COMMAND: git commit filename -m 'commit message' e.g git command test.txt -m 'changes added in test.txt file'
 
 		
-	//	GIT Stash Commands
+	 	GIT Stash Commands
 	
-	//	git stash is used when we have to switch to some other branch and we do not want to discard changes and also not commit changes
-	//	Then we use git stash command. it will store changes from last commit to current changes in a temparary space.
+	 	git stash is used when we have to switch to some other branch and we do not want to discard changes and also not commit changes
+	 	Then we use git stash command. it will store changes from last commit to current changes in a temparary space.
 		COMMAND: git stash
 
-	//	To view changes that are stored in stash 
+	 	To view changes that are stored in stash 
 		COMMAND: git stash list
 
-	//	To retrieve changes from stash. 
-	//	METHOD 1: 
+	 	To retrieve changes from stash. 
+	 	METHOD 1: 
 		COMMAND: git stash apply
-	//	It will apply changes from recent stash but keep the changes in stash memory also.	
+	 	It will apply changes from recent stash but keep the changes in stash memory also.	
 
-	//	METHOD 2: 
+	 	METHOD 2: 
 		COMMAND: git stash pop
-	//	It will apply changes from recent stash and remove the changes from stash memory also.
+	 	It will apply changes from recent stash and remove the changes from stash memory also.
 
-	//	To retrieve changes from a specific stash
+	 	To retrieve changes from a specific stash
 		COMMAND: git stash apply stashindex 	e.g git stash apply stash@{1}	
 
-	//	To clear all stash memory
+	 	To clear all stash memory
 		COMMAND: git stash clear
 
-	//	HOW TO ADD PEOPLE OR COLLABARATOR IN YOUR REPO
-	//	Step 1:	Go to repo settings and open COLLABARATORS
-	//	Step 2:	Search by email or username and send them invitation
+	 	HOW TO ADD PEOPLE OR COLLABARATOR IN YOUR REPO
+	 	Step 1:	Go to repo settings and open COLLABARATORS
+	 	Step 2:	Search by email or username and send them invitation
 
-	//	HOW TO USE MULTIPLE GITHUB ACCOUNTS ON SINGLE SYSTEM
-	//	Step 1:  remove existing github account from vs by following command
+	 	HOW TO USE MULTIPLE GITHUB ACCOUNTS ON SINGLE SYSTEM
+	 	Step 1:  remove existing github account from vs by following command
 		COMMAND: git config --global --unset user.name
 		COMMAND: git config --global --unset user.email
 	
-	//	Step 2:  delete existing account from Windows Credential Manager.
+	 	Step 2:  delete existing account from Windows Credential Manager.
 
-	//	Step 3:  Set new user name and email by following command
+	 	Step 3:  Set new user name and email by following command
 		COMMAND: git config --global  user.name "rashid"
 		COMMAND: git config --global  user.email "rashid@gmail.com"
 
-	//	Step 4:	To see git config list
+	 	Step 4:	To see git config list
 		COMMAND: git config --list
 
-	//	WHEN A COLLABARATOR WANTS TO PUSH CODE, HE WILL DO THE FOLLOWING steps
+	 	WHEN A COLLABARATOR WANTS TO PUSH CODE, HE WILL DO THE FOLLOWING steps
 		Step 1:  CLONE THE REPO
 		NOTE: COLLABARATOR will not use git init command. because its already done by team lead.
 		Step 2:  GIT ADD .
 		Step 3:  git commit -m 'commit message'
 		Step 4:	 git push -u origin main           
 
-	//	After COLLABARATOR's code push when team lead wants the latest code.then he will run following command.
+	 	After COLLABARATOR's code push when team lead wants the latest code.then he will run following command.
 		COMMAND: git fetch or git pull or git merge origin main
 
-	//	IF WE ARE NOT ADDED AS COLLABARATOR IN A REPO AND STILL WANT TO ADD CODE IN THAT REPO 
-	//	THEN WE SEND PULL REQUEST. STEPS ARE FOLLOWING: 
+	 	IF WE ARE NOT ADDED AS COLLABARATOR IN A REPO AND STILL WANT TO ADD CODE IN THAT REPO 
+	 	THEN WE SEND PULL REQUEST. STEPS ARE FOLLOWING: 
 		
-	//	****** FROM USER SIDE ******
+	 	****** FROM USER SIDE ******
 
-	//	Step 1: Open that repo in which i want to contribute and then click on FORK option
-	//	FORK will create copy of that repo in user's github account
+	 	Step 1: Open that repo in which i want to contribute and then click on FORK option
+	 	FORK will create copy of that repo in user's github account
 
-	//	Step 2:	Now User will clone the forked repo from his account
+	 	Step 2:	Now User will clone the forked repo from his account
 	
-	//	Step 3: Best way is to first create new branch for work by this command
+	 	Step 3: Best way is to first create new branch for work by this command
 		COMMAND: git branch -b checkout new-feature
 	
-	//	Step 4: then add the code in new branch
+	 	Step 4: then add the code in new branch
 	
-	//	Step 5: Then push the code in new branch by using following Commands
+	 	Step 5: Then push the code in new branch by using following Commands
 		COMMANDS: 
 		1)	git add .
 		2)	git commit -m 'code changes by user'
 		3)	git push -u origin new-feature
 
-	//	Step 6: Then click on COMPARE AND PULL option 
+	 	Step 6: Then click on COMPARE AND PULL option 
 
-	//	Step 7: after entering title and description click on CREATE PULL REQUEST
+	 	Step 7: after entering title and description click on CREATE PULL REQUEST
 
-	//	****** FROM OWNER SIDE ******
+	 	****** FROM OWNER SIDE ******
 
-	//	Step 8: Click on PULL REQUETS tab in repo
+	 	Step 8: Click on PULL REQUETS tab in repo
 
-	//	Step 9: Click on COMMIT to see changes 
+	 	Step 9: Click on COMMIT to see changes 
 
-	//	Step 10: Click on REVIEW CHANGES. here are three option 
-	//	Option 1: Comment ( pass some comment on pull request but not accepting pull request)
-	//	Option 2: Approve ( Approve changes and merging it in main branch of original repo)
-	//	Option 3: Request Changes (tell user to first make these changes then pull request will approaved)
+	 	Step 10: Click on REVIEW CHANGES. here are three option 
+	 	Option 1: Comment ( pass some comment on pull request but not accepting pull request)
+	 	Option 2: Approve ( Approve changes and merging it in main branch of original repo)
+	 	Option 3: Request Changes (tell user to first make these changes then pull request will approaved)
 
-	
+
+	 	GITHUB ACTIONS
+
+	 	1)	Github Actions is builtin tool for CI/CD in Github.
+		2)	Automate tasks like testing, building and deploying
+		3)	Works like a Virtual Assistant for developers
+		4) 	It automate builds and tests, Improve code quality, Auto-deployment
+
+	 	GITHUB ACTIONS WORKFLOW
+
+		It is auotmated process that runs based on triggers/events
+		Triggers are the action that are performing on repo.
+		Workflows are defined using YAML files inside .github/workflows/folder.
+
+		Key components of Workflow
+		Event:	Event or trigger means what your workflow will do the task.
+		Job:	Set of steps/tasks that execute inside runner e.g build, test, deploy	 	
+		Step:	A single task in a Job
+		Runner:	A virtual machine where we run our workflow
+
+
+
+
+
+
+
 
 
 
