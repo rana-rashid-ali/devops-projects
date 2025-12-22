@@ -351,11 +351,15 @@
 		Workflows are defined using YAML files inside .github/workflows/folder.
 
 		Key components of Workflow
+		
 		Event:	Event or trigger means what your workflow will do the task.
 		Job:	Set of steps/tasks that execute inside runner e.g build, test, deploy	 	
 		Step:	A single task in a Job
 		Runner:	A virtual machine where we run our workflow
-
+		
+		Workflow execution flow
+		
+		Event Occurs -> Workflow starts -> Jobs execute in parallel(by default)
 
 
 
