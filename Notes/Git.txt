@@ -360,6 +360,31 @@
 		
 		Event Occurs -> Workflow starts -> Jobs execute in parallel(by default)
 
+		How to create GitHub Actions
+
+		Step 1: 	First create new repo
+		Step 2: 	Go to Actions tab and Select Setup workflow yourself
+					NOTE: we can use built-in template for this. but for now. we will manually set everything.
+		Step 3: 	It will create a main.yaml file in .github/workflows
+		Step 4: 	Now edit the main.yaml file
+					Content of main.yaml
+
+					name: Rana Rashid // this is name of workflow
+
+					on:				  // this is trigger
+  					  push:			  // this is event on which we want to execute workflow. it means when code is pushed then execute this workflow.
+    					branches: [ main ]	// this repo could have more than one branches so branch name should be mention here.
+
+					
+					jobs:			// here we specify job
+  						demo:		// name of job
+    						runs-on: ubuntu-latest	// virtual machine or runner. ubuntu-latest is default runner in Github
+
+    						steps:	// here we specify the step
+      							- name: Greetings		// name of step
+        						  run: echo "Hello from Workflow" 	// task that will be run.
+		
+
 
 
 
